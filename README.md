@@ -57,14 +57,20 @@ Make sure docker.io and ssh is installed on your (virtual) machine. Download the
 sudo apt install docker.io ssh
 ```
 
-Download the latest version of our weeve-client docker image:
+Download the latest version of our weeveOS docker image:
+```
+sudo docker pull weeveiot/weeveOS:latest
+```
+
+or the developer version (approx. 12 GB)
+
 ```
 sudo docker pull weeveiot/weeveOS-dev:latest
 ```
 
 Now the container can be run with the `docker run`command. The parameter `-p` redirects the port to your host machine. You can see the running containers with `sudo docker ps -a`.
 ```
-sudo docker run -d -p 1883:1883 -p 1337:22 weeveiot/weeveOS-dev:latest /usr/sbin/sshd -D
+sudo docker run -d -p 1883:1883 -p 1337:22 weeveiot/weeveOS:latest /usr/sbin/sshd -D
 ```
 
 Use ssh to establish a connection into the newly created container:
