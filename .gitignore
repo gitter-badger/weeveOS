@@ -1,0 +1,14 @@
+host/*.o
+consumer
+
+producer
+register
+unregister
+ta/*.o*
+ta/*.dmp
+ta/*.elf
+ta/*.map
+ta/*.stripped.elf
+ta/*.ta
+ta/.ta.ld.d
+ta/ta.lds
