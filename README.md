@@ -51,11 +51,11 @@ We recommend using our <a href="http://dev.weeve.network/dl/weeve-vm.ova" target
 
 Download the latest version of our weeveOS docker image (approx. 1 GB)
 ```
-sudo docker pull weeveiot/weeveOS:latest
+sudo docker pull weeveiot/weeveOS
 ```
 Now the container can be run with the `docker run`command. The parameter `-p` redirects the port to your host machine. You can see the running containers with `sudo docker ps -a`.
 ```
-sudo docker run -d -p 1883:1883 -p 1337:22 weeveiot/weeveOS:latest /usr/sbin/sshd -D
+sudo docker run -d -p 1883:1883 -p 1337:22 weeveiot/weeveOS /usr/sbin/sshd -D
 ```
 
 Use ssh to establish a connection into the newly created container:
@@ -76,7 +76,7 @@ sudo apt install docker.io ssh
 
 Download the latest version of our weeveOS docker image (approx. 1 GB)
 ```
-sudo docker pull weeveiot/weeveOS:latest
+sudo docker pull weeveiot/weeveOS
 ```
 
 **or** the developer version (approx. 12 GB)
