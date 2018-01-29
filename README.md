@@ -47,7 +47,7 @@ Go to <a href="http://dev.weeve.network" target="_blank">dev.weeve.network</a> a
 ### Non-linux-based OS (MacOS, Windows)
 
 In case you want to try out our demonstrator on a non-linux-based machine you need to use a linux-based virtual machine. 
-We recommend using our <a href="http://dev.weeve.network/dl/weeve-vm.ova" target="_blank">weeve VM</a> to make sure you can use all of our core features. It comes with all dependecies, to make sure that you can get started immediately! (The root password is *weeve*). Run in the terminal the next docker instructions:
+We recommend using our <a href="http://dev.weeve.network/dl/weeve-vm.ova" target="_blank">weeve VM</a> to make sure you can use all of our core features. It comes with all dependecies, to make sure that you can get started immediately! (The root password is *weeve*). Run in the terminal the next docker the following *case-sensitive* instructions:
 
 Download the latest version of our weeveOS docker image (approx. 1 GB)
 ```
@@ -55,7 +55,7 @@ sudo docker pull weeveiot/weeveOS
 ```
 Now the container can be run with the `docker run`command. The parameter `-p` redirects the port to your host machine. You can see the running containers with `sudo docker ps -a`.
 ```
-sudo docker run -d -p 1883:1883 -p 1337:22 weeveiot/weeveOS /usr/sbin/sshd -D
+sudo docker run -d -p 1883:1883 -p 1337:22 weeveiot/weeveos
 ```
 
 Use ssh to establish a connection into the newly created container:
@@ -87,7 +87,7 @@ sudo docker pull weeveiot/weeveOS-dev:latest
 
 Now the container can be run with the `docker run`command. The parameter `-p` redirects the port to your host machine. You can see the running containers with `sudo docker ps -a`.
 ```
-sudo docker run -d -p 1883:1883 -p 1337:22 weeveiot/weeveOS:latest /usr/sbin/sshd -D
+sudo docker run -d -p 1883:1883 -p 1337:22 weeveiot/weeveos:latest
 ```
 
 Use ssh to establish a connection into the newly created container:
