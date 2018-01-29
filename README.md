@@ -47,7 +47,7 @@ Go to <a href="http://dev.weeve.network" target="_blank">dev.weeve.network</a> a
 ### Non-linux-based OS (MacOS, Windows)
 
 In case you want to try out our demonstrator on a non-linux-based machine you need to use a linux-based virtual machine. 
-We recommend using our <a href="http://dev.weeve.network/dl/weeve-vm.ova" target="_blank">weeve VM</a> to make sure you can use all of our core features. It comes with all dependecies, to make sure that you can get started immediately!   
+We recommend using our <a href="http://dev.weeve.network/dl/weeve-vm.ova" target="_blank">weeve VM</a> to make sure you can use all of our core features. It comes with all dependecies, to make sure that you can get started immediately! (The root password is *weeve*).   
 
 ### Linux-based OS
 
