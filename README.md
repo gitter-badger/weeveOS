@@ -44,7 +44,7 @@ Go to <a href="http://dev.weeve.network" target="_blank">dev.weeve.network</a> a
 
 ## <a name="dockerimage"></a>Pull the Docker Image
 
-### Non-linux-based OS (MacOS, Windows)
+###  MacOS, Windows
 
 In case you want to try out our demonstrator on a non-linux-based machine you need to use a linux-based virtual machine. 
 We recommend using our <a href="http://dev.weeve.network/dl/weeve-vm.ova" target="_blank">weeve VM</a> to make sure you can use all of our core features. It comes with all dependecies, to make sure that you can get started immediately! (The root password is *weeve*). 
@@ -68,7 +68,7 @@ ssh -Y root@localhost -p 1337
 The password is *weeve*
 
 
-### Linux-based OS
+### Linux
 
 Make sure docker.io and ssh is installed on your (virtual) machine. Download the neccessary dependencies:
 
@@ -99,7 +99,7 @@ ssh -Y root@localhost -p 1337
 ```
 The password is *weeve*
 
-## <a name="weeveclient"></a>Run weeve client
+## <a name="weeveclient"></a>Run weeveOS
 You are now connected to the docker container via ssh and you are already in the right folder to get started, so we can go ahead and start the weeveOS:
 
 ```
