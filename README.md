@@ -32,7 +32,7 @@ A bit more concrete, a Trusted Execution Environment (TEE) provides the isolatio
   * Program Isolation to prevent malicious processes from harming crucial processes (e.g., disrupting the execution of cryptographic algorithms)
   * Run-Time testification of processes, e.g., to monitor the generation and processing of IoT data and safeguarding their truthfulness and integrity
   * 3-round communication and battery efficient communication protocol to securely transport digital assets to marketplaces (dubbed MQTTS)
-  * Blockchain Wallet securing
+  * Blockchain Wallet isolating the signing keys and signing algorithm
   * Cryptographically secure fair exchange protocol to escrow supply and demand between IoT device through the Blockchain 
 
 We refer the reader to the tech white paper for details <a href="http://papers.weeve.network/weeve_whitepaper.pdf" target="_blank">weeve Whitepaper</a>. 
