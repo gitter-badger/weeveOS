@@ -85,7 +85,7 @@ sudo docker pull weeveiot/weeveOS
 **or** the developer version (approx. 12 GB)
 
 ```
-sudo docker pull weeveiot/weeveOS-dev:latest
+sudo docker pull weeveiot/weeveOS:latest
 ```
 
 Now the container can be run with the `docker run`command. The parameter `-p` redirects the port to your host machine. You can see the running containers with `sudo docker ps -a`.
