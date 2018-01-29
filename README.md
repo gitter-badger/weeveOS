@@ -44,9 +44,9 @@ Go to <a href="http://dev.weeve.network" target="_blank">dev.weeve.network</a> a
 
 ## <a name="dockerimage"></a>Pull the Docker Image
 
-### Non-linux-based OS
+### Non-linux-based OS (MacOS, Windows)
 
-In case you want to try out our demonstrator on a non-linux-based machine (Windows, MacOS, ...) you need to use a linux-based virtual machine. 
+In case you want to try out our demonstrator on a non-linux-based machine you need to use a linux-based virtual machine. 
 We recommend using our <a href="http://dev.weeve.network/dl/weeve-vm.ova" target="_blank">weeve VM</a> to make sure you can use all of our core features. It comes with all dependecies, to make sure that you can get started immediately!   
 
 ### Linux-based OS
@@ -57,7 +57,7 @@ Make sure docker.io and ssh is installed on your (virtual) machine. Download the
 sudo apt install docker.io ssh
 ```
 
-Download the latest version of our weeveOS docker image:
+Download the latest version of our weeveOS docker image (approx. 1 GB)
 ```
 sudo docker pull weeveiot/weeveOS:latest
 ```
