@@ -67,6 +67,7 @@ ssh -Y root@localhost -p 1337
 ```
 The password is *weeve*
 
+Please go on with the Run weeveOS section.
 
 ### Linux
 
@@ -100,13 +101,9 @@ ssh -Y root@localhost -p 1337
 The password is *weeve*
 
 ## <a name="weeveclient"></a>Run weeveOS
-You are now connected to the docker container via ssh and you are already in the right folder to get started, so we can go ahead and start the weeveOS:
+You are now connected to the docker container via ssh and you are already in the right folder to get started.
 
-```
-make run-only
-```
-
-Press **`c`** to boot weeveOS with our weeve client.
+Press **`c`** to boot weeveOS with in the qemu prompt.
 Press **`Enter`** to start the terminal.
 
 To start the registration process execute the program *register* (Type in **`register`** in the "normal world" terminal). When prompt enter your `Device ID` generated from the weeve marketplace.
