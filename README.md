@@ -17,6 +17,7 @@ The source code for the trusted world application in weeveOS.
 5. [Exploring the weeve platform](#weeveplatform)
   * [How to see your successful trades?](#weeveplatform1)
   * [What happens underneath the weeveOS?](#weeveplatform2)
+6. [Hardware Recommendations] (#hardware)
 
 ## <a name="introduction"></a>Introduction
 Weeve’s vision is to empower the Economy of Things where IoT machines (or “weeves” thereof) index, process and trade harvested data against digital assets, most notably crypto coins. We envision public or private marketplaces for any form of digital asset ranging from geo-data to electricity or delivery status, where data producers and consumers (resp., buyers and sellers) come together, escrow their supply and demand, and fairly exchange their digital assets for agreed upon prices.
@@ -119,3 +120,8 @@ When two offers (a supply and a demand) are being matched by the weeve Gateway, 
  * *register*: generates cryotographic key material in the Trusted Storage for the secure communication with the marketplace, the testification of data, and the Ethereum wallet. Through a challenge-response protocol the marketplace makes sure, that the device is the owner of the keys. For demonstration purposes the marketplace/gateway will transfer 10 ETH on our testchain to every device after its successful registration.
  * *consumer* and *producer*: start an energy-trading program on your IoT device. It emulates a process of consuming or producing energy. During each iteration the secure world will inspect the normal world program flow and testify the data. The last step is sending the testified IoT data to our marketplace, where the data will be processed further as tradable digital assets
  * *unregister*: clears the credential store with all cryotographic keys and trusted storages.
+ 
+## <a name="hardware"></a>Hardware Recommendation
+If you want to experiment with trusted execution environments a good starting point would be the either the discontinued HiKey LeMaker or the <a href="https://www.96boards.org/product/hikey960/" target="_blank">HiKey 960</a>. Both devices have been tested successfully, but we appreciate any feedback on more platforms as they become available.
+
+A good way to get in touch if you have got more questions or need further support is our <a href="https://gitter.im/weeveiot" target="_blank">gitter channel</a>.
