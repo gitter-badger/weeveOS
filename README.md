@@ -68,7 +68,7 @@ ssh -Y root@localhost -p 1337
 ```
 The password is *weeve*
 
-Please go on with the <a name="weeveclient">Run weeveOS</a> section.
+Please go on with the <a href="weeveclient">Run weeveOS</a> section.
 
 ### Linux
 
