@@ -107,7 +107,7 @@ You are now connected to the docker container via ssh and you are already in the
 Press **`c`** to boot weeveOS with in the qemu prompt.
 Press **`Enter`** to start the terminal.
 
-To start the registration process execute the program *register* (Type in **`register`** in the "normal world" terminal). When prompt enter your `Device ID` generated from the weeve marketplace.
+To start the registration process execute the program *register* (Type in **`register`** in the "normal world" terminal). When prompt enter your `Device ID` generated from the weeve marketplace (you can past from clipboard via Ctrl+Shift+V).
 
 Now you are connected to the marketplace and your device is sucessfully registered. If you want to produce or consume digital assets start the program **`consumer`** or **`producer`** and follow the instructions.
 
