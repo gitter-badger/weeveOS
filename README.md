@@ -13,7 +13,7 @@ The source code for the trusted world application in weeveOS.
 1. [Introduction](#introduction)
 2. [Join Marketplace](#marketplace)
 3. [Pull Docker Image](#dockerimage)
-4. [Run weeve client](#weeveclient)
+4. [Run weeveOS](#weeveclient)
 5. [Exploring the weeve platform](#weeveplatform)
   * [How to see your successful trades?](#weeveplatform1)
   * [What happens underneath the weeveOS?](#weeveplatform2)
@@ -120,4 +120,5 @@ When two offers (a supply and a demand) are being matched by the weeve Gateway, 
 ## <a name="hardware"></a>Running weeveOS on DevBoards
 If you want to experiment with trusted execution environments a good starting point would be the either the discontinued HiKey LeMaker or the recent <a href="https://www.96boards.org/product/hikey960/" target="_blank">HiKey 960</a>. Both devices have been tested successfully to support weeveOS.
 
-A good way to get in touch if you have got more questions or need further support is our <a href="https://gitter.im/weeveiot" target="_blank">gitter channel</a>.
+## <a name="contact"></a>Contact
+A good way to get in touch is our <a href="https://gitter.im/weeveiot" target="_blank">gitter channel</a>.
