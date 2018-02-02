@@ -41,7 +41,7 @@ We refer the reader to the tech white paper for details <a href="http://papers.w
 The  weeve Platform is the core backend software. It empowers individuals, enterprises or governmental bodies to set up, curate or join existing marketplaces. An example of an energy trading marketplace can be found here <a href="http://dev.weeve.network" target="_blank">weeve marketplace</a>. Once you installed the weeveOS docker, you can register a device on the marketplace and participate in a fair exchange.
 
 ## <a name="marketplace"></a>Join our Marketplace
-Go to <a href="http://dev.weeve.network" target="_blank">dev.weeve.network</a> and register yourself. Now log into the marketplace and go the the **MY ACCOUNT -> Device Curator** and start the device registration by clicking on the **ADD DEVICE** button in the bottom-left corner. Choose a name and other preferred options for your new device. At the end of the registration process you will receive a *Device ID*, which needs to be used in the registration process of the client (see: <a href="#weeveclient">Run weeve client</a>). You can also copy the Device ID after finishing the registration process by clicking on the devices' name in the device curator. 
+Go to <a href="http://dev.weeve.network" target="_blank">dev.weeve.network</a> and register yourself. Now log into the marketplace and go the the **MY ACCOUNT -> Device Curator** and start the device registration by clicking on the **ADD DEVICE** button in the bottom-left corner. Choose a name and other preferred options for your new device. At the end of the registration process you will receive a *Device ID*, which needs to be used in the registration process of the client (see: <a href="#weeveclient">Run weeve client</a>). You can also copy the Device ID after finishing the registration process by clicking on the devices' name in the device curator. Each device can act as a *producer* (offering the asset of tokenized energy) or as *consumer* (demanding tokenized energy for the exchange for ether).
 
 ## <a name="dockerimage"></a>Pull the Docker Image
 
@@ -70,6 +70,8 @@ The password is *weeve*
 
 Please go on with the <a href="weeveclient">Run weeveOS</a> section.
 
+**Note**: Each VM simulates an IoT device. If you intend to connect multiple devices to the marketplace demonstrator, you have to clone the VM.
+
 ### Linux
 
 Make sure docker.io and ssh is installed on your (virtual) machine. Download the neccessary dependencies:
@@ -81,12 +83,6 @@ sudo apt install docker.io ssh
 Download the latest version of our weeveOS docker image (approx. 1 GB)
 ```
 sudo docker pull weeveiot/weeveos
-```
-
-**or** the developer version (approx. 12 GB)
-
-```
-sudo docker pull weeveiot/weeveOS:latest
 ```
 
 Now the container can be run with the `docker run`command. The parameter `-p` redirects the port to your host machine. You can see the running containers with `sudo docker ps -a`.
@@ -121,7 +117,7 @@ When two offers (a supply and a demand) are being matched by the weeve Gateway, 
  * *consumer* and *producer*: start an energy-trading program on your IoT device. It emulates a process of consuming or producing energy. During each iteration the secure world will inspect the normal world program flow and testify the data. The last step is sending the testified IoT data to our marketplace, where the data will be processed further as tradable digital assets
  * *unregister*: clears the credential store with all cryotographic keys and trusted storages.
  
-## <a name="hardware"></a>Hardware Recommendation
-If you want to experiment with trusted execution environments a good starting point would be the either the discontinued HiKey LeMaker or the <a href="https://www.96boards.org/product/hikey960/" target="_blank">HiKey 960</a>. Both devices have been tested successfully, but we appreciate any feedback on more platforms as they become available.
+## <a name="hardware"></a>Running weeveOS on DevBoards
+If you want to experiment with trusted execution environments a good starting point would be the either the discontinued HiKey LeMaker or the recent <a href="https://www.96boards.org/product/hikey960/" target="_blank">HiKey 960</a>. Both devices have been tested successfully to support weeveOS.
 
 A good way to get in touch if you have got more questions or need further support is our <a href="https://gitter.im/weeveiot" target="_blank">gitter channel</a>.
