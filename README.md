@@ -17,7 +17,7 @@ The source code for the trusted world application in weeveOS.
 5. [Exploring the weeve platform](#weeveplatform)
   * [How to see your successful trades?](#weeveplatform1)
   * [What happens underneath the weeveOS?](#weeveplatform2)
-6. [Hardware Recommendations] (#hardware)
+6. [Hardware Recommendations](#hardware)
 
 ## <a name="introduction"></a>Introduction
 Weeve’s vision is to empower the Economy of Things where IoT machines (or “weeves” thereof) index, process and trade harvested data against digital assets, most notably crypto coins. We envision public or private marketplaces for any form of digital asset ranging from geo-data to electricity or delivery status, where data producers and consumers (resp., buyers and sellers) come together, escrow their supply and demand, and fairly exchange their digital assets for agreed upon prices.
