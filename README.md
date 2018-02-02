@@ -54,7 +54,7 @@ Before running in the terminal the following *case-sensitive* instructions, it c
 
 Download the latest version of our weeveOS docker image (approx. 1 GB)
 ```
-sudo docker pull weeveiot/weeveOS
+sudo docker pull weeveiot/weeveos
 ```
 Now the container can be run with the `docker run`command. The parameter `-p` redirects the port to your host machine. You can see the running containers with `sudo docker ps -a`.
 ```
