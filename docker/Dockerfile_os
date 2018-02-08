@@ -1,0 +1,37 @@
+FROM ubuntu:16.04
+
+# add i386 architecture and install dependencies for optee
+RUN dpkg --add-architecture i386
+RUN apt-get update && apt-get install -y openssh-server android-tools-adb android-tools-fastboot autoconf automake bc bison build-essential cscope curl device-tree-compiler flex ftp-upload gdisk iasl libattr1-dev libc6:i386 libcap-dev libfdt-dev libftdi-dev libglib2.0-dev libhidapi-dev libncurses5-dev libpixman-1-dev libssl-dev libstdc++6:i386 libtool libz1:i386 make mtools netcat python-crypto python-serial python-wand unzip uuid-dev xdg-utils xterm xz-utils zlib1g-dev
+
+# configure ssh
+RUN mkdir /var/run/sshd
+RUN echo 'root:weeve' | chpasswd
+RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+
+# SSH login fix. Otherwise user is kicked off after login
+RUN sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
+
+ENV NOTVISIBLE "in users profile"
+RUN echo "export VISIBLE=now" >> /etc/profile
+
+# create work folder and download weeveOS
+RUN mkdir -p /home/work
+RUN wget https://dev.weeve.network/dl/weeveos.zip -P /home/work
+RUN unzip /home/work/weeveos.zip -d /home/work
+RUN rm /home/work/weeveos.zip
+
+# download and install the missing libpng package
+RUN wget https://dev.weeve.network/dl/libpng-1.6.32.tar.xz -P /home/work
+RUN tar -xf /home/work/libpng-1.6.32.tar.xz -C /home/work
+RUN rm /home/work/libpng-1.6.32.tar.xz
+RUN cd /home/work/libpng-1.6.32
+RUN ./home/work/libpng-1.6.32/configure
+RUN make check
+RUN make install
+
+# boot the weeveOS on login
+RUN echo "cd /home/work/demonstrator/build" >> ~/.bashrc
+RUN echo "make run-only" >> ~/.bashrc
+
+CMD ["/usr/sbin/sshd", "-D"]
